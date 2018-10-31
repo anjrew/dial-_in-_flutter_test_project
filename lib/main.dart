@@ -5,7 +5,10 @@ import 'fonts.dart';
 import 'package:flutter/rendering.dart';
 import 'loginPage.dart';
 
-void main() => runApp(new MyApp());
+void main() { 
+  debugPaintSizeEnabled = true;
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -94,25 +97,30 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 // Container( height: 50.0,  width: 50.0, margin: const EdgeInsets.all(30),
                 //   decoration: (BoxDecoration(image:DecorationImage(image: ( new AssetImage('assets/images/DialInWhiteLogo.png')))))),
+                
 
+                // Dial in Logo
                 Container(
                   margin: const EdgeInsets.all(15.0),
                   child: Image.asset('assets/images/DialInWhiteLogo.png',
                       height: 50.0, width: 50.0),
                 ),
 
+
+                // Welcome text
                 Container(
                   width: 230.0,
-                  margin: const EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.all(10.0),
                   alignment: Alignment(0.0, 0.0),
                   child: Text(StringLabels.welcomeToDialIn,
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white70, fontSize: 23.0)),
                 ),
 
+                // Instructions
                 Container(
                   width: 260.0,
-                  margin: const EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.all(10.0),
                   alignment: Alignment(0.0, 0.0),
                   child: Text(StringLabels.logInWithDetails,
                       textAlign: TextAlign.center,
@@ -122,14 +130,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 // Email field
                 Container(
                     width: 200.0,
-                    padding: EdgeInsets.all(5.0),
-                    margin: const EdgeInsets.all(15.0),
+                    padding: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(0.0),
                     alignment: Alignment(0.0, 0.0),
                     child: TextField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(10.0),
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(10.0))),
+                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(20.0))),
                             filled:  true,
                             hintText: StringLabels.email,
                             hintStyle: TextStyle(color: Colors.black),
@@ -139,14 +147,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                     // decoration: BoxDecoration( borderRadius: BorderRadius.all(new Radius.circular(10.0)), color: Colors.black),
                     width: 200.0,
-                    padding: EdgeInsets.all(5.0),
+                    padding: EdgeInsets.all(10.0),
                     margin: const EdgeInsets.all(0.0),
                     alignment: Alignment(0.0, 0.0),
                     child: TextFormField(
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
-                                 contentPadding: EdgeInsets.all(10.0),
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(10.0))),
+                            contentPadding: EdgeInsets.all(10.0),
+                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(20.0))),
                             filled:  true,
                             hintText: StringLabels.password,
                             hintStyle: TextStyle(color: Colors.black),
@@ -154,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 // Forgotton password
                 Container(
-                  margin: const EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.all(5.0),
                   child: FlatButton(
                       child: Text(StringLabels.forgottonPassword,
                           style: TextStyle(color: Colors.white70)),
@@ -167,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 // Login button
                 Container(
-                    margin: const EdgeInsets.all(15.0),
+                    margin: const EdgeInsets.all(10.0),
                     child: RaisedButton(
                         color: Colors.transparent,
                         child: Text(StringLabels.logIn,
