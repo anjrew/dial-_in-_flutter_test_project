@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'strings.dart';
 import 'fonts.dart';
 import 'package:flutter/rendering.dart';
+import 'loginPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -33,10 +34,13 @@ class MyHomePage extends StatefulWidget {
 
 /// UI View
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   void forgotPassword() {
     print("Pressed");
+  }
+
+  void loginButtonPressed(){
+    print('login button pressed');
   }
 
   @override
@@ -77,12 +81,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 // horizontal).
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container( width: 200.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
-                  Text(StringLabels.welcomeToDialIn),
+                  Container( width: 220.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
+                  Text(StringLabels.welcomeToDialIn,
+                   textAlign: TextAlign.center, 
+                        style: TextStyle( color: Colors.white, fontSize: 23.0 )),
                   ),
 
-                  Container( width: 200.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
-                  Text(StringLabels.logInWithDetails, textAlign:   TextAlign.center),
+                  Container( width: 250.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
+                  Text(StringLabels.logInWithDetails, textAlign: TextAlign.center, style: TextStyle( color: Colors.white )),
                   ),
 
                   Container( width: 200.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
@@ -91,19 +97,27 @@ class _MyHomePageState extends State<MyHomePage> {
                             hintText: StringLabels.email)),
                   ),
 
-                  Container( width: 200.0, margin: const EdgeInsets.all(20.0),  alignment: Alignment(0.0, 0.0), child: 
+                  Container( width: 200.0, margin: const EdgeInsets.all(0.0),  alignment: Alignment(0.0, 0.0), child: 
                     TextField( textAlign: TextAlign.center,
                         decoration: new InputDecoration.collapsed(
-                            hintText: StringLabels.password)),
+                            hintText: StringLabels.password,  fillColor: Colors.transparent)
+                    )
                    ),
 
                   FlatButton(
-                      child: Text(StringLabels.forgottonPassword),
+                      child: Text(StringLabels.forgottonPassword, style: TextStyle( color: Colors.white )),
                       onPressed: () {
                         setState(() {
                           forgotPassword();
                         });
-                      })
+                      }),
+
+                  RaisedButton(
+                    child: Text(StringLabels.logIn),
+                    onPressed: (){setState(() {
+                                  loginButtonPressed();        
+                                        });
+                    })
                 ],
               ),
             ),
