@@ -37,3 +37,49 @@ class AppColors {
 }
 
 enum ColorType { background, tint, white , toolBar,  popupBackground, primarySwatch}
+
+
+
+// class AppColor {
+
+//   static Colors getColor(ColorsType font) {
+//     Color returnValue;
+
+//     switch (font) {
+//       case ColorType.background:
+//         returnValue = Colors.black87;
+//         break;
+
+//         case ColorType.tint:
+//         returnValue = Colors.black38;
+//         break;
+
+//         case ColorType.buttone:
+//         returnValue = Colors.orange;
+//         break;
+
+//         case ColorType.white:
+//         returnValue = Colors.orange;
+//         break;
+
+//         case ColorType.toolBar:
+//         returnValue = Colors.orange;
+//         break;
+
+//         case ColorType.popupBackground:
+//         returnValue = Colors.orange;
+//         break;
+
+//         case ColorType.primarySwatch:
+//         returnValue = Colors.orange;
+//         break;
+
+
+//       default:
+//         returnValue = Colors.orange;
+//     }
+//     return returnValue;
+//   }
+// }
+
+// enum ColorsType { background, tint, white , toolBar,  popupBackground, primarySwatch, buttone }

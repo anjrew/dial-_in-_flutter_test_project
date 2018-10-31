@@ -121,33 +121,38 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 // Email field
                 Container(
-                    color: Colors.white.withOpacity(0.5),
                     width: 200.0,
                     padding: EdgeInsets.all(5.0),
                     margin: const EdgeInsets.all(15.0),
                     alignment: Alignment(0.0, 0.0),
                     child: TextField(
                         textAlign: TextAlign.center,
-                        decoration: new InputDecoration.collapsed(
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(10.0),
+                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(10.0))),
+                            filled:  true,
                             hintText: StringLabels.email,
-                            hintStyle: TextStyle(color: Colors.black87),
-                            fillColor: Colors.white30))),
+                            hintStyle: TextStyle(color: Colors.black),
+                            fillColor: Colors.grey.withOpacity(0.7)))),
 
                 // Password
-                 Container(
-                    color: Colors.white.withOpacity(0.5),
+                Container(
+                    // decoration: BoxDecoration( borderRadius: BorderRadius.all(new Radius.circular(10.0)), color: Colors.black),
                     width: 200.0,
                     padding: EdgeInsets.all(5.0),
                     margin: const EdgeInsets.all(0.0),
                     alignment: Alignment(0.0, 0.0),
                     child: TextFormField(
                         textAlign: TextAlign.center,
-                        decoration: new InputDecoration.collapsed(
+                        decoration: InputDecoration(
+                                 contentPadding: EdgeInsets.all(10.0),
+                            border: OutlineInputBorder( borderRadius: BorderRadius.all(const Radius.circular(10.0))),
+                            filled:  true,
                             hintText: StringLabels.password,
                             hintStyle: TextStyle(color: Colors.black),
-                            fillColor: Colors.white30))),
+                            fillColor: Colors.grey.withOpacity(0.7)))),
 
-                // Login Button
+                // Forgotton password
                 Container(
                   margin: const EdgeInsets.all(15.0),
                   child: FlatButton(
@@ -164,8 +169,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                     margin: const EdgeInsets.all(15.0),
                     child: RaisedButton(
-                       color: Colors.transparent,  
-                        child: Text(StringLabels.logIn, style: TextStyle( color: Colors.orange, fontSize: 25.0 ,fontWeight: FontWeight.w300) ),
+                        color: Colors.transparent,
+                        child: Text(StringLabels.logIn,
+                            style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.w300)),
                         onPressed: () {
                           setState(() {
                             loginButtonPressed();
@@ -180,18 +189,20 @@ class _MyHomePageState extends State<MyHomePage> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-
-                          // Text    
+                          // Text
                           Container(
                               margin: const EdgeInsets.all(10.0),
                               child: Text(StringLabels.dontHaveAccount,
                                   style: TextStyle(
                                       color: Colors.white70, fontSize: 10.0))),
 
-                          // Sign up button            
+                          // Sign up button
                           RaisedButton(
-                            color: Colors.orange.shade600,
-                            child: Text(StringLabels.signYouUp),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(20.0)),
+                            color: Colors.orange.shade600.withOpacity(0.8),
+                            child: Text(StringLabels.signUp,
+                                style: TextStyle(fontWeight: FontWeight.w700)),
                             onPressed: () {
                               signUpButtonPressed();
                             },
