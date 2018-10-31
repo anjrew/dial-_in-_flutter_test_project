@@ -34,7 +34,7 @@ class StringLabels {
         static String baristaName = "Barista name";
         static String baristaNotes = "Barista notes";
         
-        static String dontHaveAccount = "Don't have an accout?"
+        static String dontHaveAccount = "Don't have an accout?";
         static String addBarista = "Add barista";
         static String account = "Account";
         static String editAccountInfo = "Edit account info";

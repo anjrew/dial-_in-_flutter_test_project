@@ -44,7 +44,7 @@ class MyHomePage extends StatefulWidget {
 /// UI View
 class _MyHomePageState extends State<MyHomePage> {
   void forgotPassword() {
-    print("Pressed");
+    print(" Forgot password button pressed");
   }
 
   void loginButtonPressed() {
@@ -96,55 +96,63 @@ class _MyHomePageState extends State<MyHomePage> {
                 //   decoration: (BoxDecoration(image:DecorationImage(image: ( new AssetImage('assets/images/DialInWhiteLogo.png')))))),
 
                 Container(
-                  margin: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(15.0),
                   child: Image.asset('assets/images/DialInWhiteLogo.png',
                       height: 50.0, width: 50.0),
                 ),
 
                 Container(
                   width: 230.0,
-                  margin: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(15.0),
                   alignment: Alignment(0.0, 0.0),
                   child: Text(StringLabels.welcomeToDialIn,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 23.0)),
+                      style: TextStyle(color: Colors.white70, fontSize: 23.0)),
                 ),
 
                 Container(
                   width: 260.0,
-                  margin: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(15.0),
                   alignment: Alignment(0.0, 0.0),
                   child: Text(StringLabels.logInWithDetails,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white)),
+                      style: TextStyle(color: Colors.white70)),
                 ),
 
+                // Email field
                 Container(
+                    color: Colors.white.withOpacity(0.5),
                     width: 200.0,
-                    margin: const EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(5.0),
+                    margin: const EdgeInsets.all(15.0),
                     alignment: Alignment(0.0, 0.0),
                     child: TextField(
                         textAlign: TextAlign.center,
                         decoration: new InputDecoration.collapsed(
                             hintText: StringLabels.email,
-                            hintStyle: TextStyle(color: Colors.white30)))),
+                            hintStyle: TextStyle(color: Colors.black87),
+                            fillColor: Colors.white30))),
 
-                Container(
+                // Password
+                 Container(
+                    color: Colors.white.withOpacity(0.5),
                     width: 200.0,
+                    padding: EdgeInsets.all(5.0),
                     margin: const EdgeInsets.all(0.0),
                     alignment: Alignment(0.0, 0.0),
-                    child: TextField(
+                    child: TextFormField(
                         textAlign: TextAlign.center,
                         decoration: new InputDecoration.collapsed(
                             hintText: StringLabels.password,
-                            hintStyle: TextStyle(color: Colors.white30),
+                            hintStyle: TextStyle(color: Colors.black),
                             fillColor: Colors.white30))),
 
+                // Login Button
                 Container(
-                  margin: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(15.0),
                   child: FlatButton(
                       child: Text(StringLabels.forgottonPassword,
-                          style: TextStyle(color: Colors.white)),
+                          style: TextStyle(color: Colors.white70)),
                       onPressed: () {
                         setState(() {
                           forgotPassword();
@@ -152,31 +160,37 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                 ),
 
+                // Login button
                 Container(
-                    margin: const EdgeInsets.all(20.0),
+                    margin: const EdgeInsets.all(15.0),
                     child: RaisedButton(
-                        child: Text(StringLabels.logIn),
+                       color: Colors.transparent,  
+                        child: Text(StringLabels.logIn, style: TextStyle( color: Colors.orange, fontSize: 25.0 ,fontWeight: FontWeight.w300) ),
                         onPressed: () {
                           setState(() {
                             loginButtonPressed();
                           });
                         })),
 
+                // Sign up row
                 Container(
-                    margin: const EdgeInsets.all(20.0),
+                    margin: const EdgeInsets.all(15.0),
                     child: Center(
                         child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
 
-                         
-                          Text(StringLabels.dontHaveAccount,
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 10.0)),
+                          // Text    
+                          Container(
+                              margin: const EdgeInsets.all(10.0),
+                              child: Text(StringLabels.dontHaveAccount,
+                                  style: TextStyle(
+                                      color: Colors.white70, fontSize: 10.0))),
 
-
+                          // Sign up button            
                           RaisedButton(
+                            color: Colors.orange.shade600,
                             child: Text(StringLabels.signYouUp),
                             onPressed: () {
                               signUpButtonPressed();
