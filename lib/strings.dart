@@ -34,6 +34,7 @@ class StringLabels {
         static String baristaName = "Barista name";
         static String baristaNotes = "Barista notes";
         
+        static String dontHaveAccount = "Don't have an accout?"
         static String addBarista = "Add barista";
         static String account = "Account";
         static String editAccountInfo = "Edit account info";
@@ -210,6 +211,7 @@ class StringLabels {
         
         static String couldNotSignYouUp = "Could not sign you up";
         static String signYouUp = "All signed up";
+        static String signUp = 'Sign up';
         
         static String nowLogIn = "You can now log in!";
         static String deStringe = "DeStringe";
