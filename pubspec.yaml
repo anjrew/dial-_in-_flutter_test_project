@@ -44,6 +44,9 @@ flutter:
   assets:
      - assets/images/cherries.jpg
      - assets/images/DialInWhiteLogo.png
+     - assets/images/user.png
+     - assets/images/back_icon.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

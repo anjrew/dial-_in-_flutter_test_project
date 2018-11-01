@@ -1,85 +1,47 @@
 import 'package:flutter/material.dart';
 
+
 class AppColors {
 
   static Color getColor(ColorType font) {
     Color returnValue;
 
-    switch (font) {
+    switch ( font ) {
+
       case ColorType.background:
-        returnValue = Color.fromARGB(250, 50, 50, 50);
+        returnValue = Colors.black87;
         break;
+
         case ColorType.tint:
-        returnValue = Color.fromARGB(250, 208 , 136, 75);
+        returnValue = Colors.black38;
+        break;
+
+        case ColorType.button:
+        returnValue = Colors.orange.shade600;
         break;
 
         case ColorType.white:
-        returnValue = Color.fromARGB(250, 230, 230, 230);
+        returnValue = Colors.white70;
         break;
 
         case ColorType.toolBar:
-        returnValue = Color.fromARGB(250, 25, 25, 25);
+        returnValue = Colors.black87;
         break;
 
         case ColorType.popupBackground:
-        returnValue = Color.fromARGB(50, 0, 0, 0);
+        returnValue = Colors.black12;
         break;
 
         case ColorType.primarySwatch:
-        returnValue = Color.fromARGB(50, 0, 0, 0);
+        returnValue = Colors.orange;
         break;
 
+
       default:
-        returnValue = Color.fromARGB(250, 230, 230, 230);
+        returnValue = Colors.orange;
     }
     return returnValue;
   }
 }
 
-enum ColorType { background, tint, white , toolBar,  popupBackground, primarySwatch}
-
-
-
-// class AppColor {
-
-//   static Colors getColor(ColorsType font) {
-//     Color returnValue;
-
-//     switch (font) {
-//       case ColorType.background:
-//         returnValue = Colors.black87;
-//         break;
-
-//         case ColorType.tint:
-//         returnValue = Colors.black38;
-//         break;
-
-//         case ColorType.buttone:
-//         returnValue = Colors.orange;
-//         break;
-
-//         case ColorType.white:
-//         returnValue = Colors.orange;
-//         break;
-
-//         case ColorType.toolBar:
-//         returnValue = Colors.orange;
-//         break;
-
-//         case ColorType.popupBackground:
-//         returnValue = Colors.orange;
-//         break;
-
-//         case ColorType.primarySwatch:
-//         returnValue = Colors.orange;
-//         break;
-
-
-//       default:
-//         returnValue = Colors.orange;
-//     }
-//     return returnValue;
-//   }
-// }
-
-// enum ColorsType { background, tint, white , toolBar,  popupBackground, primarySwatch, buttone }
+enum ColorType { background, tint, white , toolBar,  popupBackground, primarySwatch, button, raisedButton }

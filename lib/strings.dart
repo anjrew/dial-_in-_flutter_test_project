@@ -1,246 +1,250 @@
 
 
-class StringLabels {
-    
-        static String forgottonPassword = 'Forgotton your password?.';
-        static String welcomeToDialIn = 'Welcome to Dial In.';
-        static String logInWithDetails = 'Log in with your email and password.';
-        static String syncData = "Sync data.";
-        static String userBig = "User";
-        static String userName = "User name";
-        static String anyExtraInformation = "Any other informaton about the brew?";
-        static String anyExtraBaristaInformation = "Any other informaton about the barista?";
-        static String writeADescriptionOfMethod = "Write a description of your brew method.";
-        static String overview = "Overview";
-        static String newe = "New";
-        static String editing = "Editing";
-        static String saved = "Saved";
-        static String email = "Email";
-        static String password = "Password";
-        static String name = "Name";
-        static String user = "User";
-        static String enterValueGrams = "Enter value (g)";
-        static String brewWeight = "Brew weight (g)";
-        static String successfullyRetrievedForUpdating = "Successfully retrieved for updating";
-        static String details = "Details";
-        static String back = "Back";
-        static String save = "Save";
-        static String edit = "Edit";
-        static String syncing = "Syncing";
+class  StringLabels {
+
+      ///since flutter
+        static const String forgottonPassword = 'Forgotton your password?.';
+        static const String welcomeToDialIn = 'Welcome to Dial In.';
+        static const String logInWithDetails = 'Log in with your email and password.';
+        static const String newUser = 'New user';
+
+
+        static const String syncData = "Sync data.";
+        static const String userBig = "User";
+        static const String userName = "User name";
+        static const String anyExtraInformation = "Any other informaton about the brew?";
+        static const String anyExtraBaristaInformation = "Any other informaton about the barista?";
+        static const String writeADescriptionOfMethod = "Write a description of your brew method.";
+        static const String overview = "Overview";
+        static const String newe = "New";
+        static const String editing = "Editing";
+        static const String saved = "Saved";
+        static const String email = "Email";
+        static const String password = "Password";
+        static const String name = "Name";
+        static const String user = "User";
+        static const String enterValueGrams = "Enter value (g)";
+        static const String brewWeight = "Brew weight (g)";
+        static const String successfullyRetrievedForUpdating = "Successfully retrieved for updating";
+        static const String details = "Details";
+        static const String back = "Back";
+        static const String save = "Save";
+        static const String edit = "Edit";
+        static const String syncing = "Syncing";
         
-        static String notes = "Notes";
-        static String blankItem = "Blank item";
-        static String baristaLevel = "Barista level";
-        static String baristaName = "Barista name";
-        static String baristaNotes = "Barista notes";
+        static const String notes = "Notes";
+        static const String blankItem = "Blank item";
+        static const String baristaLevel = "Barista level";
+        static const String baristaName = "Barista name";
+        static const String baristaNotes = "Barista notes";
         
-        static String dontHaveAccount = "Don't have an accout?";
-        static String addBarista = "Add barista";
-        static String account = "Account";
-        static String editAccountInfo = "Edit account info";
-        static String shareSettings = "Share Settings";
-        static String brewSettings = "Brew settings";
-        static String weightUnit = "Weight unit";
-        static String temparatureUnit = "Temparature unit";
-        static String help = "Help";
-        static String feedback = "Feedback";
-        static String language = "Language";
-        static String about = "About";
-        static String website = "Website";
-        
-        
-        static String photoSource = "Photo source";
-        static String cancel = "Cancel";
-        static String photoLibrary = "Photo library";
-        static String camera = "Camera";
-        
-        static String chooseSource = "Choose a source";
+        static const String dontHaveAccount = "Don't have an accout?";
+        static const String addBarista = "Add barista";
+        static const String account = "Account";
+        static const String editAccountInfo = "Edit account info";
+        static const String shareSettings = "Share Settings";
+        static const String brewSettings = "Brew settings";
+        static const String weightUnit = "Weight unit";
+        static const String temparatureUnit = "Temparature unit";
+        static const String help = "Help";
+        static const String feedback = "Feedback";
+        static const String language = "Language";
+        static const String about = "About";
+        static const String website = "Website";
         
         
-        static String altitude = "Altitude (masl)";
+        static const String photoSource = "Photo source";
+        static const String cancel = "Cancel";
+        static const String photoLibrary = "Photo library";
+        static const String camera = "Camera";
         
-        static String method = "Method";
-        
-        static String dateTested = "Date tested";
-        static String selectCoffee = "Select coffee";
-        static String fillInScores = "Fill in scores";
-        static String maxScore = "20";
-        
-        static String beginner = "Beginner";
-        static String amatuer = "Amatuer";
-        static String junior  = "Junior";
-        static String intermediate = "Intermediate";
-        static String medium = "Medium";
-        static String professional  = "Professianal";
-        static String senior  = "Senior";
-        static String lead  = "Lead";
+        static const String chooseSource = "Choose a source";
         
         
-        static String flat = "Flat";
-        static String conical = "Conical";
-        static String turkish  = "Turkish";
-        static String blade = "Blade";
+        static const String altitude = "Altitude (masl)";
         
-        static String autoFill = "Autofill";
+        static const String method = "Method";
         
+        static const String dateTested = "Date tested";
+        static const String selectCoffee = "Select coffee";
+        static const String fillInScores = "Fill in scores";
+        static const String maxScore = "20";
         
-        static String american = "American";
-        static String french = "French";
-        static String italian = "Italian";
-        static String cinnamon = "Cinnamon";
-        static String light = "light";
-        static String dark = "Dark";
-        static String mediumDark = "Medium - Dark";
-        static String newEngland = "New England";
-        static String city = "City";
-        static String fullCity = "Full City";
-        static String espresso = "Espresso";
-        static String filter = "Filter";
-        static String omni = "Omni";
-        static String vienna = "Vienna";
-        static String spanish = "Spanish";
-        
-        static String enterInfo = "Info?";
-        static String enterType = "Type?";
-        static String enterDescriptors = "Taste descriptors?";
-        static String enterScore = "Score? (1-5)";
-        static String giveDetails = "Details?";
-        static String enterValue = "Value?";
-        static String enterNicknameOptional = "Enter name?";
-        static String inputDate = "Date?";
-        
-        static String density = "Density mg/l";
-        static String moisture = "Moisture content %";
-        static String aW = "Water activity";
-        static String barista = "Barista";
-        static String level = "Level";
-        
-        static String originDetails = "Origin details";
-        
-        static String greenCoffeeDetails = "Green details";
-        static String roastedCoffeeDetails = "Roasting details";
-        
-        static String date = "Date";
-        
-        static String grindSetting = "Grind setting";
-        static String add = "Add";
-        static String settings = "Settings";
-        static String finalScore = "Final score";
-        static String enterRecipeDetails = "Enter your recipe details.";
-        static String tastingScoreTotal = "54";
-        static String body = "Body";
-        static String afterTaste = "AfterTaste";
-        static String descriptors = "Descriptors";
-        
-        static String enterDescription = "Enter description.";
-        
-        static String addCoffeeProfile = "Add a coffee";
-        static String addGrinderProfile = "Add a Grinder";
-        static String addWaterProfile = "Add water";
-        static String addBrewingEquipment =  "Add brewing equipment";
-        static String addNewRecipe = "Add new recipe";
-        
-        static String coffeeBeans = "Coffee beans";
-        static String nickname = "Name";
-        static String recipe = "Recipe";
-        static String coffee = "Coffee";
-        static String grinder = "Grinder";
-        static String brewingDose = "Dose (g)";
-        static String yield = "Yield (g)";
-        static String time = "Time";
-        static String water = "Water";
-        static String temparature = "Temparature ℃";
-        static String tds = "TDS %";
-        static String score = "Score";
-        static String preinfusion =  "Pre-infusion";
-        static String coffeeId = "Coffee ID";
-        static String producer = "Producer";
-        static String lot = "Lot";
-        static String farm = "Farm";
-        static String region = "Region";
-        static String country = "Country";
-        static String beanType =  "Bean Type";
-        static String beanSize = "Bean Size";
-        static String roastProfile = "Roast Profile";
-        static String roastDate = "Roast Date";
-        static String roasteryName = "Roastery name";
+        static const String beginner = "Beginner";
+        static const String amatuer = "Amatuer";
+        static const String junior  = "Junior";
+        static const String intermediate = "Intermediate";
+        static const String medium = "Medium";
+        static const String professional  = "Professianal";
+        static const String senior  = "Senior";
+        static const String lead  = "Lead";
         
         
-        static String grinderId = "Grinder ID";
-        static String grinderMake = "Grinder Make";
-        static String grinderModel = "Grinder Model";
+        static const String flat = "Flat";
+        static const String conical = "Conical";
+        static const String turkish  = "Turkish";
+        static const String blade = "Blade";
         
-        static String make = "Make";
-        static String model  = "Model";
-        static String burrs = "Burrs";
-        static String testTemparature = "Test temparature ℃";
-        static String gh = "GH ppm";
-        static String kh = "KH ppm";
-        static String ppm = "Total ppm";
-        static String ph = "pH";
-        static String ghDisplay = "ppm GH";
-        static String khDisplay = "ppm KH";
-        static String ppmDisplay = "ppm Total";
-        static String brewingEquipment = "Equipment";
-        static String equipmentId = "Equipment ID";
-        
-        static String equipmentType = "Equipment Type";
-        static String equipmentMake = "Equipment Make";
-        static String equipmentModel = "Equipment Model";
+        static const String autoFill = "Autofill";
         
         
-        static String type = "Type";
-        static String waterID = "Water ID";
-        static String celsius = "℃";
-        static String faranheit = "℉";
+        static const String american = "American";
+        static const String french = "French";
+        static const String italian = "Italian";
+        static const String cinnamon = "Cinnamon";
+        static const String light = "light";
+        static const String dark = "Dark";
+        static const String mediumDark = "Medium - Dark";
+        static const String newEngland = "New England";
+        static const String city = "City";
+        static const String fullCity = "Full City";
+        static const String espresso = "Espresso";
+        static const String filter = "Filter";
+        static const String omni = "Omni";
+        static const String vienna = "Vienna";
+        static const String spanish = "Spanish";
         
-        static String logIn = "Log in";
-        static String createAccount = "Create Account";
+        static const String enterInfo = "Info?";
+        static const String enterType = "Type?";
+        static const String enterDescriptors = "Taste descriptors?";
+        static const String enterScore = "Score? (1-5)";
+        static const String giveDetails = "Details?";
+        static const String enterValue = "Value?";
+        static const String enterNicknameOptional = "Enter name?";
+        static const String inputDate = "Date?";
         
-        static String grams = "g";
-        static String percent = "%";
-        static String seconds = "secs";
-        static String minutes = "mins";
+        static const String density = "Density mg/l";
+        static const String moisture = "Moisture content %";
+        static const String aW = "Water activity";
+        static const String barista = "Barista";
+        static const String level = "Level";
+        
+        static const String originDetails = "Origin details";
+        
+        static const String greenCoffeeDetails = "Green details";
+        static const String roastedCoffeeDetails = "Roasting details";
+        
+        static const String date = "Date";
+        
+        static const String grindSetting = "Grind setting";
+        static const String add = "Add";
+        static const String settings = "Settings";
+        static const String finalScore = "Final score";
+        static const String enterRecipeDetails = "Enter your recipe details.";
+        static const String tastingScoreTotal = "54";
+        static const String body = "Body";
+        static const String afterTaste = "AfterTaste";
+        static const String descriptors = "Descriptors";
+        
+        static const String enterDescription = "Enter description.";
+        
+        static const String addCoffeeProfile = "Add a coffee";
+        static const String addGrinderProfile = "Add a Grinder";
+        static const String addWaterProfile = "Add water";
+        static const String addBrewingEquipment =  "Add brewing equipment";
+        static const String addNewRecipe = "Add new recipe";
+        
+        static const String coffeeBeans = "Coffee beans";
+        static const String nickname = "Name";
+        static const String recipe = "Recipe";
+        static const String coffee = "Coffee";
+        static const String grinder = "Grinder";
+        static const String brewingDose = "Dose (g)";
+        static const String yield = "Yield (g)";
+        static const String time = "Time";
+        static const String water = "Water";
+        static const String temparature = "Temparature ℃";
+        static const String tds = "TDS %";
+        static const String score = "Score";
+        static const String preinfusion =  "Pre-infusion";
+        static const String coffeeId = "Coffee ID";
+        static const String producer = "Producer";
+        static const String lot = "Lot";
+        static const String farm = "Farm";
+        static const String region = "Region";
+        static const String country = "Country";
+        static const String beanType =  "Bean Type";
+        static const String beanSize = "Bean Size";
+        static const String roastProfile = "Roast Profile";
+        static const String roastDate = "Roast Date";
+        static const String roasteryName = "Roastery name";
         
         
-        static String enterPrecentage = "Enter percentage";
-        static String enterWeightInGrams = "Enter weight in grams";
-        static String enterTemparature = "Enter temparature ℃";
-        static String wait = "Wait!";
-        static String enterNickname = "Name?";
+        static const String grinderId = "Grinder ID";
+        static const String grinderMake = "Grinder Make";
+        static const String grinderModel = "Grinder Model";
         
-        static String couldNotSignYouUp = "Could not sign you up";
-        static String signYouUp = "All signed up";
-        static String signUp = 'Sign up';
+        static const String make = "Make";
+        static const String model  = "Model";
+        static const String burrs = "Burrs";
+        static const String testTemparature = "Test temparature ℃";
+        static const String gh = "GH ppm";
+        static const String kh = "KH ppm";
+        static const String ppm = "Total ppm";
+        static const String ph = "pH";
+        static const String ghDisplay = "ppm GH";
+        static const String khDisplay = "ppm KH";
+        static const String ppmDisplay = "ppm Total";
+        static const String brewingEquipment = "Equipment";
+        static const String equipmentId = "Equipment ID";
         
-        static String nowLogIn = "You can now log in!";
-        static String deStringe = "DeStringe";
-        
-        static String tasteBalance = "Taste balance";
-        static String tactile = "Tactile";
-        static String flavour = "Flavour";
-        
-        static String taste = "Flavour";
-        static String sweet = "Sweet";
-        static String acidic = "Acidic";
-        static String balance = "Balance";
-        static String weight = "Weight";
-        static String texture = "Texture";
-        static String finish = "Finish";
-        static String bitter = "Bitter";
+        static const String equipmentType = "Equipment Type";
+        static const String equipmentMake = "Equipment Make";
+        static const String equipmentModel = "Equipment Model";
         
         
-        static String processingMethod = "Processing method";
-        static String washed = "Washed";
-        static String natural = "Natural";
-        static String semiWashed = "Semi-washed";
-        static String honey = "Honey";
-        static String whiteHoney = "White honey";
-        static String yellowHoney = "Yellow honey";
-        static String redHoney = "Red honey";
-        static String blackHoney = "Black honey";
-        static String pulpNatural = "PulpNatural";
-        static String wetHulled = "Wet hulled";
+        static const String type = "Type";
+        static const String waterID = "Water ID";
+        static const String celsius = "℃";
+        static const String faranheit = "℉";
+        
+        static const String logIn = "Log in";
+        static const String createAccount = "Create Account";
+        
+        static const String grams = "g";
+        static const String percent = "%";
+        static const String seconds = "secs";
+        static const String minutes = "mins";
+        
+        
+        static const String enterPrecentage = "Enter percentage";
+        static const String enterWeightInGrams = "Enter weight in grams";
+        static const String enterTemparature = "Enter temparature ℃";
+        static const String wait = "Wait!";
+        static const String enterNickname = "Name?";
+        
+        static const String couldNotSignYouUp = "Could not sign you up";
+        static const String signYouUp = "All signed up";
+        static const String signUp = 'Sign up';
+        
+        static const String nowLogIn = "You can now log in!";
+        static const String deconstStringe = "Deconst Stringe";
+        
+        static const String tasteBalance = "Taste balance";
+        static const String tactile = "Tactile";
+        static const String flavour = "Flavour";
+        
+        static const String taste = "Flavour";
+        static const String sweet = "Sweet";
+        static const String acidic = "Acidic";
+        static const String balance = "Balance";
+        static const String weight = "Weight";
+        static const String texture = "Texture";
+        static const String finish = "Finish";
+        static const String bitter = "Bitter";
+        
+        
+        static const String processingMethod = "Processing method";
+        static const String washed = "Washed";
+        static const String natural = "Natural";
+        static const String semiWashed = "Semi-washed";
+        static const String honey = "Honey";
+        static const String whiteHoney = "White honey";
+        static const String yellowHoney = "Yellow honey";
+        static const String redHoney = "Red honey";
+        static const String blackHoney = "Black honey";
+        static const String pulpNatural = "PulpNatural";
+        static const String wetHulled = "Wet hulled";
 }
  
     
