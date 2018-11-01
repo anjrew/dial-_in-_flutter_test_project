@@ -17,7 +17,7 @@ class AppColors {
         break;
 
         case ColorType.button:
-        returnValue = Colors.orange.shade600;
+        returnValue = Colors.orange.shade500;
         break;
 
         case ColorType.white:

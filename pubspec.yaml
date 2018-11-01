@@ -46,6 +46,7 @@ flutter:
      - assets/images/DialInWhiteLogo.png
      - assets/images/user.png
      - assets/images/back_icon.png
+     - assets/images/cherriestwo.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

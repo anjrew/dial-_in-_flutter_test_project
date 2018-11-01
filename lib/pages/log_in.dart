@@ -41,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
            Pagebackground(AssetImage('assets/images/cherries.jpg')), 
        
-
           new Center(
             ///
             /// View components

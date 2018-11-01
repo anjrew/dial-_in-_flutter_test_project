@@ -97,11 +97,12 @@ CircularPicture(this._image,this._size);
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15.0),
-      child: Image.asset('assets/images/DialInWhiteLogo.png',
-          height: _size, width: _size),
+      child: _image,
+          height: _size, width: _size
     );
   }
 }
+
 
 
 ///

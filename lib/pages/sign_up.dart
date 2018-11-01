@@ -17,7 +17,7 @@ final Image _userImage = Image.asset('assets/images/user.png');
           ///
           /// Background
           /// 
-           Pagebackground(AssetImage('assets/images/cherries.jpg')),
+           Pagebackground(AssetImage('assets/images/cherriestwo.jpg')),
 
           ///
           /// Back icon
@@ -25,18 +25,16 @@ final Image _userImage = Image.asset('assets/images/user.png');
           Container(  height: 30.0, width: 30.0, margin: EdgeInsets.all(20.0), padding: EdgeInsets.all(0.0),
             child: RawMaterialButton( onPressed: () => Navigator.pop(context), 
             child: Container(   decoration: BoxDecoration( image: DecorationImage( image: AssetImage('assets/images/back_icon.png'), fit: BoxFit.cover)),),),),
-
-
          
           new Center(
             child: Column(  mainAxisAlignment: MainAxisAlignment.center, 
               children: <Widget>[
               
                 /// New User text
-                Text(StringLabels.newUser,  style: TextStyle(color: Colors.white70, fontSize: 30.0),),
+                Text(StringLabels.newUser,  style: TextStyle(color: Colors.black87, fontSize: 30.0),),
 
                 ///User Picture
-                Container( margin: EdgeInsets.all(25.0) , child: CircularPicture(_userImage, 50.0)),
+                Container( margin: EdgeInsets.fromLTRB(25.0, 0.0, 25.0, 25.0) , child: CircularPicture(_userImage, 100.0)),
 
                 /// Sign up details
                 /// Username
