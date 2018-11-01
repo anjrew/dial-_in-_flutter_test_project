@@ -55,6 +55,7 @@ class TextFieldEntry extends StatefulWidget {
   }
 }
 
+/// Textfield Entry
 class _TextFieldEntryState extends State<TextFieldEntry> {
   String _placeholderText;
 
@@ -66,9 +67,8 @@ class _TextFieldEntryState extends State<TextFieldEntry> {
 
   @override
   Widget build(BuildContext context) {
-    return // Password
+    return 
         Container(
-            // decoration: BoxDecoration( borderRadius: BorderRadius.all(new Radius.circular(10.0)), color: Colors.black),
             width: 200.0,
             padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.all(0.0),

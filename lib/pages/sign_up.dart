@@ -17,26 +17,31 @@ final Image _userImage = Image.asset('assets/images/user.png');
 
           /// Background
            Pagebackground(AssetImage('assets/images/cherries.jpg')),
+
+          // Container(  height: 50.0, width: 50.0, margin: EdgeInsets.all(20.0), padding: EdgeInsets.all(0.0),
+          //   child: RaisedButton(  color: Colors.transparent, onPressed: () => print('fuck'), 
+          //   child: Container(   decoration: BoxDecoration( image: DecorationImage( image: AssetImage('assets/images/back_icon.png'), fit: BoxFit.cover)),),),),
+
               
           new Center(
-            child: Column( 
+            child: Column(  mainAxisAlignment: MainAxisAlignment.center, 
               children: <Widget>[
 
-                // RaisedButton.icon(onPressed: () =>{} , label: Image.asset('assets/images/back_icon.png'), icon: Image.asset('assets/images/back_icon.png'), ),
-                // RaisedButton( onPressed:()=> {},  ),
+                Text(StringLabels.newUser,  style: TextStyle(color: Colors.white70, fontSize: 30.0),),
 
-                Text(StringLabels.newUser),
+                Container( margin: EdgeInsets.all(25.0) , child: CircularPicture(_userImage, 50.0)),
 
-                CircularPicture(_userImage, 50.0),
-
-                Text(StringLabels.userName),
+                Text(StringLabels.userName, style: TextStyle( color: Colors.white70),),
                 TextFieldEntry(StringLabels.userName),
-                Text(StringLabels.email),
+                Text(StringLabels.email, style: TextStyle( color: Colors.white70),),
                 TextFieldEntry(StringLabels.email),
-                Text(StringLabels.password),
+                Text(StringLabels.password, style: TextStyle( color: Colors.white70),),
                 TextFieldEntry(StringLabels.password),
 
-                // ActionButton(StringLabels.signUp)
+                Container(  margin: EdgeInsets.all(25.0), child: ActionButton(StringLabels.signUp),)
+                
+
+              
               ],
             ),
           )
