@@ -110,8 +110,9 @@ CircularPicture(this._image,this._size);
 class ActionButton extends StatelessWidget {
 
 final String _buttonTitle;
+final void _buttonAction;
 
-ActionButton(this._buttonTitle);
+ActionButton(this._buttonTitle, this._buttonAction);
 
   void actionButtonPressed() {
     print('login button pressed');
@@ -127,7 +128,28 @@ Widget build(BuildContext context) {
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0)),
       onPressed: () {
         actionButtonPressed();
+        _buttonAction;
       },
     );
+  }
+}
+
+///
+/// Custom page transitions
+/// 
+class MyCustomRoute<T> extends MaterialPageRoute<T> {
+  MyCustomRoute({ WidgetBuilder builder, RouteSettings settings })
+      : super(builder: builder, settings: settings);
+
+  @override
+  Widget buildTransitions(BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation,
+      Widget child) {
+    if (settings.isInitialRoute)
+      return child;
+    // Fades between routes. (If you don't want any animation, 
+    // just return child.)
+    return new FadeTransition(opacity: animation, child: child);
   }
 }

@@ -134,7 +134,7 @@ Widget build(BuildContext context) {
       color: Colors.orange.shade600.withOpacity(0.6),
       child: Text(StringLabels.logIn,
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0)),
-      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUpPage()),)
+      onPressed: () => Navigator.pushNamed(context, '/somewhere')
     );
   }
 }
@@ -159,8 +159,8 @@ class SignUpButton extends StatelessWidget {
                     color: Colors.orange,
                     fontSize: 20.0,
                     fontWeight: FontWeight.w300)),
-            onPressed: () {
-              signUpButtonPressed();
-            }));
+         onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SignUpPage())),
+            )
+            );
   }
 }
