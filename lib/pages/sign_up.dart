@@ -23,8 +23,9 @@ final Image _userImage = Image.asset('assets/images/user.png');
           /// Back icon
           /// 
           Container(  height: 30.0, width: 30.0, margin: EdgeInsets.all(20.0), padding: EdgeInsets.all(0.0),
-            child: RaisedButton(  color: Colors.transparent, onPressed: () => Navigator.pop(context), 
+            child: RawMaterialButton( onPressed: () => Navigator.pop(context), 
             child: Container(   decoration: BoxDecoration( image: DecorationImage( image: AssetImage('assets/images/back_icon.png'), fit: BoxFit.cover)),),),),
+
 
          
           new Center(
