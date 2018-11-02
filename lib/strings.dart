@@ -7,7 +7,8 @@ class  StringLabels {
         static const String welcomeToDialIn = 'Welcome to Dial In.';
         static const String logInWithDetails = 'Log in with your email and password.';
         static const String newUser = 'New user';
-
+        static const String brewCount = 'Brew count';
+        static const String beanStash = 'Bean stash';
 
         static const String syncData = "Sync data.";
         static const String userBig = "User";

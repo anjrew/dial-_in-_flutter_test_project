@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../strings.dart';
 import '../custom_widgets.dart';
 import 'sign_up.dart';
+import 'overview_page.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -15,6 +16,9 @@ class MyHomePage extends StatefulWidget {
 
 /// UI View
 class _MyHomePageState extends State<MyHomePage> {
+
+  String email;
+  String password;
 
   /// Functions
   void forgotPassword() {
@@ -89,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                 ),
 
-                LoginButton(),
+                LoginButton( () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => OverviewPage()))),
 
                 Container(
                     margin: const EdgeInsets.all(15.0),
@@ -125,27 +129,29 @@ class _MyHomePageState extends State<MyHomePage> {
 ///
 class LoginButton extends StatelessWidget {
 
-Widget build(BuildContext context) {
-    return RaisedButton(
-      padding: EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 10.0),
-      shape:
-          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-      color: Colors.orange.shade600.withOpacity(0.6),
-      child: Text(StringLabels.logIn,
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0)),
-      onPressed: () => Navigator.pushNamed(context, '/somewhere')
-    );
+  final VoidCallback loginActon ;
+
+
+  LoginButton(this.loginActon); 
+
+  Widget build(BuildContext context) {
+      return RaisedButton(
+        padding: EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 10.0),
+        shape:
+            RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+        color: Colors.orange.shade600.withOpacity(0.6),
+        child: Text(StringLabels.logIn,
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0)),
+        onPressed: () => loginActon());
   }
-}
+  }
+
 
 ///
 ///Sign up Button
 ///
 
 class SignUpButton extends StatelessWidget {
-  void signUpButtonPressed() {
-    print('login button pressed');
-  }
 
 @override
   Widget build(BuildContext context) {

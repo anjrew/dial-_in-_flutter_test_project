@@ -88,6 +88,7 @@ class _TextFieldEntryState extends State<TextFieldEntry> {
 }
 
 class CircularPicture extends StatelessWidget {
+  
 final Image _image;
 final double _size;
 

@@ -38,13 +38,13 @@ final Image _userImage = Image.asset('assets/images/user.png');
 
                 /// Sign up details
                 /// Username
-                Text(StringLabels.userName, style: TextStyle( color: Colors.white70),),
+                Text(StringLabels.userName, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
                 TextFieldEntry(StringLabels.userName),
                 /// Email
-                Text(StringLabels.email, style: TextStyle( color: Colors.white70),),
+                Text(StringLabels.email, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
                 TextFieldEntry(StringLabels.email),
                 /// Password
-                Text(StringLabels.password, style: TextStyle( color: Colors.white70),),
+                Text(StringLabels.password, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
                 TextFieldEntry(StringLabels.password),
 
                 /// Signup button
