@@ -9,6 +9,7 @@ class  StringLabels {
         static const String newUser = 'New user';
         static const String brewCount = 'Brew count';
         static const String beanStash = 'Bean stash';
+        static const String logOut = 'Log out';
 
         static const String syncData = "Sync data.";
         static const String userBig = "User";

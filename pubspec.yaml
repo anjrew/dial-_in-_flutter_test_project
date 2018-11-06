@@ -47,7 +47,13 @@ flutter:
      - assets/images/user.png
      - assets/images/back_icon.png
      - assets/images/cherriestwo.jpg
-
+     - assets/images/addProfileButtonWithOrangeTint.png
+     - assets/images/logout.png
+     - assets/images/aeropressSmaller512x512.png
+     - assets/images/whiteRecipe200X200.png
+     - assets/images/drop.png
+     - assets/images/whiteRecipe200X200.png
+     - assets/images/coffee-beanSmaller512x512.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
