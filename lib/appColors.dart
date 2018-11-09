@@ -36,7 +36,6 @@ class AppColors {
         returnValue = Colors.orange;
         break;
 
-
       default:
         returnValue = Colors.orange;
     }

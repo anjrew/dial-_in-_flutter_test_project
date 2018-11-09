@@ -250,4 +250,95 @@ class  StringLabels {
 }
  
     
-  
+  class ViewControllerIds {
+        
+        static const String userName = "UserNameViewController";
+        static const String name = "NameViewController";
+        static const String email = "EmailViewController";
+        static const String password = "PasswordViewController";
+        static const String userSignUpViewController = "UserSignUpViewController";
+        static const String brewWeight = "BrewWeightViewController";
+        static const String photo = "PhotoViewController";
+        static const String photos = "PhotosViewController";
+        static const String altitude = "AltitudeViewController";
+        static const String addOrCreateProfile = "AddOrCreateProfileViewController";
+        static const String method = "MethodViewController";
+        static const String recordOrGetRecommendation = "Record or Get Recommendation";
+        static const String barista = "BaristaViewController";
+        static const String level = "LevelViewController";
+        static const String notes = "Notes";
+        static const String moisture = "MoistureContentViewController";
+        static const String aW = "WaterActivityViewController";
+        static const String density = "DensityViewController";
+        static const String getRecommendation = "RecommendViewController";
+        static const String date = "DateViewController";
+        static const String recipe = "Recipe";
+        static const String coffee = "Coffee";
+        static const String grinder = "Grinder";
+        static const String brewingDose = "Brewing Dose";
+        static const String yield = "Yield";
+        static const String time = "Time";
+        static const String water = "Water";
+        static const String temparature = "Temparature";
+        static const String preInfusion = "PreInfusion";
+        static const String tds = "tds";
+        static const String waterId = "WaterId";
+        static const String ppm = "Ppm";
+        static const String gh = "GH";
+        static const String kh = "KH";
+        static const String ph = "ph";
+        static const String testTemparature = "testTemparature";
+        static const String profile = "profile";
+        static const String processingMethod = "ProcessingMethod";
+        static const String roasteryName = "RoasteryName";
+        static const String singlePickerViewPopup = "SinglePickerViewPopupViewController";
+        static const String coffeeID = "CoffeeIDViewController";
+        static const String producer = "ProducerViewController";
+        static const String lot = "LotViewController";
+        static const String farm = "FarmViewController";
+        static const String region = "RegionViewController";
+        static const String country = "CountryViewController";
+        static const String beanType =  "BeanTypeViewController";
+        static const String beanSize = "BeanSizeViewController";
+        static const String roastProfile = "RoastProfileproducerViewController";
+        static const String roastDate = "RoastDateproducerViewController";
+        static const String grinderMake = "GrinderMake";
+        static const String grinderModel = "GrinderModel";
+        static const String grinderId = "GrinderID";
+        static const String burrs = "Burrs";
+        static const String brewingEquipment = "BrewingEquipmentViewController";
+        static const String brewingEquipmentId = "EquipmentId";
+        static const String brewingEquipmentModel = "EquipmentModel";
+        static const String brewingEquipmentMake = "EquipmentMake";
+        static const String brewingEquipmentType = "BrewingEquipmentType";
+        static const String grindSetting = "GrindSettingViewController";
+        static const String score = "ScoringTableViewController";
+        static const String flavour = "FlavourViewController";
+        static const String body = "BodyViewController";
+        static const String balance = "BalanceViewController";
+        static const String afterTaste = "AfterTasteViewController";
+        static const String descriptors = "DescriptorsViewController";
+    }
+
+     class StringDataArrays {
+        
+        static List<List<String>> beanType =
+            
+            [["","Unknown","Blend","Bourbon","Yellow Bourbon" , "Caturra", "Mixed Heirlooms", "Geisha" ,"Typica", "HR-61", "Catuai","Yellow Catuai", "Catimor","Blue Mountain","Colombian","Java","K7", "Maragogipe", "Maragaturra", "Mocha", "Mundo Novo", "Pacamara", "Pacas", "Ruiru 11", "Sarchimor", "SL28","SL34", "Mandheling ", "Timor"]];
+        
+        static List<List<String>> beanSize =
+            [["","Unknown","Blend","Supremo","Excelso","Elephants","AA","AB","C","20/64","18/64","16/64","14/64","12/64","10/64","8/64","20,18","16,14","12,10","8","Very Large","Large","Medium","Small","Shells","Superior","Segundas","Terceras","Caracol","Caracolli","Caracolillo"]];
+        
+        
+        static List<List<String>> equipmentTypes = [["","Unknown","Espresso", "Drip" , "Immersion", "Vaccum", "Coldbrew", "ColdDrip"]];
+        
+        static List<List<String>> equipmentMake = [["","Unknown","Synesso", "Hario" , "Kalita", "Chemex", "La Morrozocco", "Slayer", "Aerobie"]];
+        
+        static List<List<String>> countrys = [["","Unknown","Blend","Brazil" , "Colombia", "Ethiopia", "Indoneasia" , "Honduras", "India","Mexico", "Guatemala","Peru","Nicaragua","Ivory Coast", "Costa Rica", "Kenya", "Rwanada", "Burundi","Panama","Bolivia","Papua New Guinea", "Tanzania", "El Salvador", "Ecuador", "Yemen","Cameroon", "Loas", "Madagascar","Ganbon", "Thailand", "Venezuala", "Dominican Republic", "Haiti", "Democratic Republic of the Congo",  "Pillipines", "Togo", "Guinea",  "Cuba",  "Veitnam","China","Uganda", "Timor Leste", "Central African Republic","Nigeria", "Ghana"]];
+        
+        static List<List<String>> burrTypes = [["","Unknown",StringLabels.flat, StringLabels.turkish ,StringLabels.conical , StringLabels.blade]];
+        
+        static List<List<String>> roastTypes = [["","Unknown",StringLabels.espresso, StringLabels.filter ,StringLabels.medium , StringLabels.dark, StringLabels.light, StringLabels.mediumDark, StringLabels.cinnamon, StringLabels.newEngland, StringLabels.american, StringLabels.city, StringLabels.fullCity, StringLabels.vienna, StringLabels.french, StringLabels.italian, StringLabels.spanish]];
+        
+        static List<List<String>> baristaLevels = [["","Unknown",StringLabels.beginner, StringLabels.amatuer ,StringLabels.junior , StringLabels.intermediate, StringLabels.medium, StringLabels.professional, StringLabels.senior, StringLabels.lead]];
+     }

@@ -20,7 +20,5 @@ class UserProfileState extends State<UserProfilePage>{
   Widget build(BuildContext context) {
     return new Container( child: Center( child: Icon(Icons.access_time),),);   
 
-    
-    
 }
 }

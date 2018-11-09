@@ -6,9 +6,9 @@ import '../custom_widgets.dart';
 import 'sign_up.dart';
 import '../appColors.dart';
 import 'data.dart';
-import 'profile.dart';
+import '../profile.dart';
 import 'feed.dart';
-import 'user_profie.dart';
+import 'user_profile.dart';
 
 
 class OverviewPage extends StatefulWidget{
@@ -21,13 +21,15 @@ class OverviewPageState extends State<OverviewPage> with SingleTickerProviderSta
 TabController controller;
 
 int _bottomNavbarIndex = 0;
-List<Widget> _tabViews;
+TabViewDataArray _tabViews;
 
 
 @override
 void initState() { 
   super.initState();
-  controller = new TabController(vsync: this, length: 3);
+  _tabViews = TabViewDataArray();
+  controller = new TabController(vsync: this, length: _tabViews.ref.length);
+
 }
 
 @override
@@ -48,109 +50,43 @@ super.dispose();
       ///
       appBar: AppBar( backgroundColor: Colors.orange.withOpacity(0.8),title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
       leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
-            child: Text('Log out'),), ),
+      child: Text('Log out'),), ),
 
       body: TabBarView(
         controller: controller,
         children: <Widget>[
-          new DataPage(),
-          new FeedPage(),
-          new UserProfilePage()
-        ],
+          _tabViews.ref[0].screen,
+          _tabViews.ref[1].screen,
+          _tabViews.ref[2].screen, 
+                 ],
       ),
     
-     
-     
-
      bottomNavigationBar: Material(child: 
      TabBar(
         controller: controller,
         tabs: <Widget>[    
-          Tab(icon: Icon(Icons.public), text: "Feed"),
-          Tab(icon: Icon(Icons.list), text: "Data"),
-          Tab(icon: Icon(Icons.portrait), text: "User"),
+          _tabViews.ref[0].tab,
+          _tabViews.ref[1].tab,
+          _tabViews.ref[2].tab,
         ],),),
       );
     }
 }
 
 
-///
-/// Tab bar controller
-/// 
+class TabViewDataArray{
 
-// TabBarView(
-//         controller: _controller,
-//         children: <Widget>[    
-//           Tab(icon: Icon(Icons.public), text: "Feed"),
-//           Tab(icon: Icon(Icons.list), text: "Data"),
-//           Tab(icon: Icon(Icons.portrait), text: "User"),
-//         ],
-  
-//       ),
+  List<TabViewData> ref;
 
+ TabViewDataArray(){ 
+   
+    this.ref = [
 
+    TabViewData(FeedPage(), Tab(icon: Icon(Icons.public), text: "Feed")),
+   
+    TabViewData(DataPage(),Tab(icon: Icon(Icons.list), text: "Data"),),
 
-
-
-
-
-
-
-
-///
-/// Page components
-///
-
-/// Bar button
-
-
-
-
-
-
-
-
-  // new Stack(
-  //       children: <Widget>[
-
-  //     ///
-  //     ///Background
-  //     ///
-  //     Pagebackground(AssetImage('assets/images/cherries.jpg')),
-    
-  //     /// 
-  //     /// Main body
-  //     /// 
-  //     ListView( children: <Widget>[
-  //       Card( color: Colors.transparent,
-  //         child: Column( children: <Widget>[
-
-  //             ///
-  //             /// User profile card
-  //             /// 
-  //             UserCard(),
-
-  //             ProfileCard()
- 
-  //         ],          
-  //         ),
-  //       )
-  //     ]
-  //     ),
-  //      ]
-  //    ),
-
-
-  //  bottomNavigationBar: Material(
-  //     currentIndex: _bottomNavbarIndex, 
-  //     onTap: (int index){ setState(() { _bottomNavbarIndex = index;}); },
-  //     items: [
-
-  //       BottomNavigationBarItem(icon: Icon(Icons.public), title: Text("Feed")),
-  //       BottomNavigationBarItem(icon: Icon(Icons.list), title: Text("Data")),
-  //       BottomNavigationBarItem(icon: Icon(Icons.portrait), title: Text("User")),
-  //       // BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("Twat")),
-  //       // BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("My Profile"))
-
-  //     ],)
+    TabViewData(UserProfilePage(),Tab(icon: Icon(Icons.portrait), text: "User"),),
+    ];
+ }
+}
