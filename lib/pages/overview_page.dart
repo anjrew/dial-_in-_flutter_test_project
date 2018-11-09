@@ -7,10 +7,19 @@ import 'sign_up.dart';
 import '../appColors.dart';
 
 
-class OverviewPage extends StatelessWidget{
+class OverviewPage extends StatefulWidget{
+
+
+ @override
+  OverviewPageState createState() => new OverviewPageState();
+  }
+
+
+
+class OverviewPageState extends State<OverviewPage>{
 
 TabController _tabBarController;
-nt _bottomNavbarIndex;
+// int _bottomNavbarIndex;
 
 @override
 void initState(){
@@ -32,7 +41,9 @@ void initState(){
       appBar: AppBar( backgroundColor: Colors.orange.withOpacity(0.8),title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
       leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
             child: Text('Log out'),), ),
+  
      
+      
       body:
       new Stack(
         children: <Widget>[
