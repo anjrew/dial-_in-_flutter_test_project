@@ -32,13 +32,7 @@ void initState(){
       appBar: AppBar( backgroundColor: Colors.orange.withOpacity(0.8),title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
       leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
             child: Text('Log out'),), ),
-      // Container(padding: EdgeInsets.all(20.0) ,decoration: BoxDecoration(image: DecorationImage( image: AssetImage('assets/images/logout.png'), fit: BoxFit.cover)),)
-      ///Other buttons
-      //  actions: <Widget>[
-      //     FlatButton(onPressed:() { Navigator.pop(context);}, child:  Text(StringLabels.logOut, style: TextStyle(color: Colors.black, fontSize: 15.0),),)
-      // ],
      
-      
       body:
       new Stack(
         children: <Widget>[
@@ -143,20 +137,6 @@ class SegmentControlButton extends StatelessWidget{
       Text(text, style: TextStyle( fontSize: 10.0 ))],),),
       
       );
-      
-
-              // Card( 
-              //   child: Column( 
-              //     children: <Widget>[
-              //             Container(
-              //                   margin: const EdgeInsets.all(5.0),
-              //                   child: image,
-              //                       height: 20.0, width: 20.0
-              //                 ),
-              //             Container(margin: EdgeInsets.all(5.0), child:Text(text) ),         
-              //     ]
-              //   )
-              // );
   }
   }
 
