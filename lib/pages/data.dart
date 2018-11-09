@@ -22,7 +22,7 @@ int _bottomNavbarIndex = 0;
 ///
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(   
+    return new Container( child: Center( child: Icon(Icons.access_time),),   
       
     );
     

@@ -17,7 +17,7 @@ class FeedPageState extends State<FeedPage>{
 ///
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(   
+    return new Container( child: Center( child: Icon(Icons.ac_unit),),   
       
     );
     

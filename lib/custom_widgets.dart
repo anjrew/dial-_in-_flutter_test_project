@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'strings.dart';
+import 'appColors.dart';
 
 ///
 /// Background
@@ -153,5 +155,218 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
     // Fades between routes. (If you don't want any animation, 
     // just return child.)
     return new FadeTransition(opacity: animation, child: child);
+  }
+}
+
+class CustomToolbar extends StatelessWidget {
+Widget build(BuildContext context) {
+    return
+              Card(child: Row(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[
+                
+                Flex(direction: Axis.horizontal ),
+                SegmentControlButton('Social'),
+                Flex(direction: Axis.horizontal ),
+                SegmentControlButton('Social'),
+                Flex(direction: Axis.horizontal ),
+                SegmentControlButton('Social'),
+                Flex(direction: Axis.horizontal ),
+                SegmentControlButton('Social'),
+                Flex(direction: Axis.horizontal )
+
+              ],),);
+}
+}
+
+///Segmented control button
+class SegmentControlButton extends StatelessWidget{
+
+  final String text;
+  // final Image image;
+
+ SegmentControlButton(this.text);
+
+@override
+  Widget build(BuildContext context) {
+    return
+
+    Container(width: 50.0 ,height: 50.0 ,child:
+    RawMaterialButton(onPressed: () =>{}, child:  
+    Column(children: <Widget>[
+
+      Icon(Icons.add),
+      Text(text, style: TextStyle( fontSize: 10.0 ))],),),
+      
+      );
+  }
+  }
+
+
+  class UserCard extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Row( 
+         mainAxisAlignment: MainAxisAlignment.center,
+         crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+
+        ///
+        /// User Image
+        /// 
+        Container(child: Center(child:CircularPicture(Image.asset('assets/images/user.png'), 100.0))),
+        
+        Column( children: <Widget>[
+          ///
+          /// User name text
+          /// 
+          Container( margin: EdgeInsets.all(20.0), child:Text(StringLabels.userName,  style: TextStyle( fontSize: 20.0),)),
+
+          Container( child: Row( children: <Widget>[
+
+            ///
+            /// Brew count
+            /// 
+            Container( padding: EdgeInsets.all(5.0), child:
+            /// Title
+            Column(children: <Widget>[Text(StringLabels.brewCount), 
+            /// Value
+            CountLabel('B')])
+            ),
+
+            ///
+            ///Bean stash
+            ///
+            Container( padding: EdgeInsets.all(5.0), child:
+            ///Title
+            Column(children: <Widget>[Text(StringLabels.beanStash),
+            /// Value
+            CountLabel('C')])
+            )
+          ],),)
+        ],)
+        ]
+      )
+    );
+  }
+}
+
+///Profile card
+class ProfileCard extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Row( 
+        children: <Widget>[
+          
+          ///
+          /// Profile picture
+          /// 
+          Container( child: CircularPicture(Image.asset('assets/images/user.png'), 60.0)),
+
+          Expanded(child:
+          Row( children: <Widget>[
+
+            ///
+            /// Main name and secondnary details
+            /// 
+            Expanded(child:Container( padding: EdgeInsets.all(0.0), child:
+            Column(crossAxisAlignment: CrossAxisAlignment.start,children: <Widget>[
+              Container(margin: EdgeInsets.all(10.0),child: Text('Main')),
+              Container(margin: EdgeInsets.all(10.0), child: Text('Second'),)
+              ]
+              ) 
+            )),
+            ///
+            /// Third and fourth details
+            ///
+            Expanded(child:Container( padding: EdgeInsets.all(0.0), child:
+            Column(crossAxisAlignment: CrossAxisAlignment.end,children: <Widget>[
+              Container(margin: EdgeInsets.all(10.0),child: Text('Third')),
+              Container(margin: EdgeInsets.all(10.0), child: Text('Fourth'),)
+              ]
+              ) 
+            ))
+        ]
+      )
+      )
+        ]
+      )
+    );
+}
+}
+
+///Profile card
+class SocialProfle extends StatelessWidget{
+@override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Row( 
+        children: <Widget>[
+          
+          ///
+          /// Profile picture
+          /// 
+          Container( child: CircularPicture(Image.asset('assets/images/user.png'), 60.0)),
+
+          Expanded(child:
+          Row( children: <Widget>[
+
+            ///
+            /// Main name and secondnary details
+            /// 
+            Expanded(child:Container( padding: EdgeInsets.all(0.0), child:
+            Column(crossAxisAlignment: CrossAxisAlignment.start,children: <Widget>[
+              Container(margin: EdgeInsets.all(10.0),child: Text('Main')),
+              Container(margin: EdgeInsets.all(10.0), child: Text('Second'),)
+              ]
+              ) 
+            )),
+            ///
+            /// Third and fourth details
+            ///
+            Expanded(child:Container( padding: EdgeInsets.all(0.0), child:
+            Column(crossAxisAlignment: CrossAxisAlignment.end,children: <Widget>[
+              Container(margin: EdgeInsets.all(10.0),child: Text('Third')),
+              Container(margin: EdgeInsets.all(10.0), child: Text('Fourth'),)
+              ]
+              ) 
+            ))
+        ]
+      )
+      )
+        ]
+      )
+    );
+}
+}
+
+
+
+
+class CountLabel extends StatelessWidget{
+
+  final String _text;
+
+  CountLabel(this._text);
+
+  @override
+  Widget build(BuildContext context){
+    
+  return Container( margin: EdgeInsets.all(5.0),
+   child:Text(_text, style: TextStyle( color: AppColors.getColor(ColorType.primarySwatch), fontSize: 20.0),));
+  }
+}
+
+///
+/// Add floating action button
+/// 
+
+
+class AddButton extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context){
+return
+    FloatingActionButton(onPressed: ()=> {}, child: Icon(Icons.add),);
   }
 }
