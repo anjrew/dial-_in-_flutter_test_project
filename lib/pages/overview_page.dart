@@ -8,25 +8,23 @@ import '../appColors.dart';
 
 
 class OverviewPage extends StatefulWidget{
-
-
  @override
   OverviewPageState createState() => new OverviewPageState();
-  }
+}
 
 
 
 class OverviewPageState extends State<OverviewPage>{
 
-TabController _tabBarController;
-// int _bottomNavbarIndex;
+// TabController _tabBarController;
+int _bottomNavbarIndex = 0;
 
-@override
-void initState(){
+// @override
+// void initState(){
 
 // _tabBarController = new TabController( length: 1, vsync: this)
 
-}
+// }
 
 //
 /// UI Build
@@ -41,9 +39,7 @@ void initState(){
       appBar: AppBar( backgroundColor: Colors.orange.withOpacity(0.8),title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
       leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
             child: Text('Log out'),), ),
-  
-     
-      
+
       body:
       new Stack(
         children: <Widget>[
@@ -91,12 +87,15 @@ void initState(){
      
      floatingActionButton: FloatingActionButton(onPressed: ()=> {}, child: Icon(Icons.add),),
      bottomNavigationBar: BottomNavigationBar(
-      // currentIndex: _bottomNavbarIndex, 
+      currentIndex: _bottomNavbarIndex, 
+      onTap: (int index){ setState(() { _bottomNavbarIndex = index;}); },
       items: [
 
-        BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("Twat")),
-        BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("Twat")),
-        BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("Twat"))
+        BottomNavigationBarItem(icon: Icon(Icons.public), title: Text("Feed")),
+        BottomNavigationBarItem(icon: Icon(Icons.list), title: Text("Data")),
+        BottomNavigationBarItem(icon: Icon(Icons.portrait), title: Text("User")),
+        // BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("Twat")),
+        // BottomNavigationBarItem(icon: Icon(Icons.add), title: Text("My Profile"))
 
       ],)
     
