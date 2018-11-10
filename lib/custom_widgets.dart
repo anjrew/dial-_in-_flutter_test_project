@@ -404,6 +404,13 @@ class AddButton extends StatelessWidget {
   }
 }
 
+
+
+
+////////////////////////////////// Custom Classes ///////////////////////
+
+
+
 ///
 /// Tab View Data
 class TabViewData{
@@ -413,4 +420,11 @@ class TabViewData{
   
   TabViewData(this.screen, this.tab);
 
+}
+
+class TabViewDataArray{
+
+  List<TabViewData> ref;
+
+ TabViewDataArray(this.ref);
 }

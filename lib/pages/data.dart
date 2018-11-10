@@ -20,7 +20,18 @@ TabViewDataArray _lists;
 @override
 void initState() { 
   super.initState();
-  _lists = TabViewDataArray();
+  _lists = TabViewDataArray([
+
+    TabViewData(ProfileList(), Tab(icon: Icon(Icons.public))),
+   
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.list)),),
+
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
+
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
+
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
+    ]);
   controller = new TabController( vsync: this, length: _lists.ref.length);
 }
 
@@ -41,7 +52,6 @@ super.dispose();
     Scaffold(body: Column( children: <Widget>[
 
       Container(child:
-
       Material(color: AppColors.getColor(ColorType.toolBar) ,child: 
       TabBar(
         indicatorPadding: EdgeInsets.all(0.0),
@@ -77,23 +87,3 @@ super.dispose();
     }
 }
 
-class TabViewDataArray{
-
-  List<TabViewData> ref;
-
- TabViewDataArray(this.ref){ 
-   
-    this.ref = [
-
-    TabViewData(ProfileList(), Tab(icon: Icon(Icons.public))),
-   
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.list)),),
-
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
-
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
-
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
-    ];
- }
-}
