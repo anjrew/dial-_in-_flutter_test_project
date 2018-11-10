@@ -6,7 +6,16 @@ class FeedPage extends StatefulWidget {
   FeedPageState createState() => new FeedPageState();
 }
 
-class FeedPageState extends State<FeedPage> {
+class FeedPageState extends State<FeedPage> with SingleTickerProviderStateMixin{
+
+
+TabController controller;
+TabViewDataArray _lists;
+
+
+
+
+  ///
   /// UI Build
   ///
   @override

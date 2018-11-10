@@ -18,7 +18,27 @@ class UserProfileState extends State<UserProfilePage>{
 ///
   @override
   Widget build(BuildContext context) {
-    return new Container( child: Center( child: Icon(Icons.access_time),),);   
+    return new Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center ,children:[
 
-}
+      Container(
+              child: Center(
+                  child: CircularPicture(
+                      Image.asset('assets/images/user.png'), 100.0))),
+
+
+      Text("Name"),
+      Text("Username")
+
+
+
+    ]
+
+    );
+    
+    
+    Container( child: Center( child:
+    
+     Card(child:Icon(Icons.access_time),),)   
+
+    );}
 }

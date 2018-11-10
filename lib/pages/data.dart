@@ -16,8 +16,6 @@ class DataPageState extends State<DataPage> with SingleTickerProviderStateMixin{
 
 TabController controller;
 TabViewDataArray _lists;
-int _topNavbarIndex = 0;
-
 
 @override
 void initState() { 
@@ -37,18 +35,27 @@ super.dispose();
 ///
   @override
   Widget build(BuildContext context) {
-    return new Container(child: Column( children: <Widget>[
+    return new 
+    
+    
+    Scaffold(body: Column( children: <Widget>[
 
       Container(child:
 
+      Material(color: AppColors.getColor(ColorType.toolBar) ,child: 
       TabBar(
+        indicatorPadding: EdgeInsets.all(0.0),
+        labelPadding: EdgeInsets.all(0.0),
         controller: controller,
         tabs: <Widget>[    
           _lists.ref[0].tab,
           _lists.ref[1].tab,
           _lists.ref[2].tab,
+          _lists.ref[3].tab,
+          _lists.ref[4].tab,
+
         ]),
-      ),
+      ),),
 
       Expanded(child:
         TabBarView(
@@ -57,15 +64,15 @@ super.dispose();
             _lists.ref[0].screen,
             _lists.ref[1].screen,
             _lists.ref[2].screen,
+            _lists.ref[3].screen,
+            _lists.ref[4].screen,
           ],
         ),
       ),
-
-      // SocialProfile(),
-      // AddButton()
-       
     ],
-    )     
+    ),  
+
+    floatingActionButton: AddButton(),   
     );   
     }
 }
@@ -74,15 +81,19 @@ class TabViewDataArray{
 
   List<TabViewData> ref;
 
- TabViewDataArray(){ 
+ TabViewDataArray(this.ref){ 
    
     this.ref = [
 
-    TabViewData(ProfileList(), Tab(icon: Icon(Icons.public), text: "Feed")),
+    TabViewData(ProfileList(), Tab(icon: Icon(Icons.public))),
    
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.list), text: "Data"),),
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.list)),),
 
-    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait), text: "User"),),
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
+
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
+
+    TabViewData(ProfileList(),Tab(icon: Icon(Icons.portrait)),),
     ];
  }
 }

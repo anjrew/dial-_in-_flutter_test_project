@@ -19,10 +19,7 @@ class OverviewPage extends StatefulWidget{
 class OverviewPageState extends State<OverviewPage> with SingleTickerProviderStateMixin{
 
 TabController controller;
-
-int _bottomNavbarIndex = 0;
 TabViewDataArray _tabViews;
-
 
 @override
 void initState() { 
@@ -48,9 +45,12 @@ super.dispose();
       /// 
       /// App bar 
       ///
-      appBar: AppBar( backgroundColor: Colors.orange.withOpacity(0.8),title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
+      appBar: AppBar(title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
       leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
-      child: Text('Log out'),), ),
+      child: Icon(Icons.exit_to_app),), 
+      actions: <Widget>[ 
+        RawMaterialButton( onPressed: () => Navigator.pop(context), child: Icon(Icons.menu))  ], ),
+    
 
       body: TabBarView(
         controller: controller,
@@ -62,13 +62,17 @@ super.dispose();
       ),
     
      bottomNavigationBar: Material(child: 
+     Material( color: AppColors.getColor(ColorType.toolBar), child:
      TabBar(
+        labelPadding: EdgeInsets.all(0.0),
+        indicatorPadding: EdgeInsets.all(0.0),
         controller: controller,
         tabs: <Widget>[    
           _tabViews.ref[0].tab,
           _tabViews.ref[1].tab,
           _tabViews.ref[2].tab,
         ],),),
+      )
       );
     }
 }
