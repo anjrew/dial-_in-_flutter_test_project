@@ -3,36 +3,71 @@ import '../strings.dart';
 import '../custom_widgets.dart';
 import 'sign_up.dart';
 import 'overview_page.dart';
+import 'package:test_project/database_functions.dart';
+import '../database_functions.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
 
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  final String title;
-
+  final String title;  
   @override
   _MyHomePageState createState() => new _MyHomePageState();
+
+  
 }
 
 /// UI View
 class _MyHomePageState extends State<MyHomePage> {
 
-  String email;
-  String password;
+  String _email = "";
+  TextEditingController _emailController = new TextEditingController();
+
+  String _password = "";
+  TextEditingController _passwordController = new TextEditingController();
 
   /// Functions
-  void forgotPassword() {
-    print(" Forgot password button pressed");
-  }
+void forgotPassword() {  print(" Forgot password button pressed");  }
 
-  void loginButtonPressed() {
-    print('login button pressed');
-  }
+void loginButtonPressed(){ 
+  print(" Login button pressed");
+  
+  PopUps.showAlert( 
+  buttonFunction:() {Navigator.of(context).pop();},
+  buttonText: StringLabels.ok ,
+  title: StringLabels.warning,
+  message: 'error',
+  context: context);  
+}
 
-  void signUpButtonPressed() {
-    print('signUp');
-  }
+//  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => OverviewPage()));
 
+
+// }
+
+
+void signUpButtonPressed() {print('signUp');}
+
+void onEmailChange(){ _email =_emailController.text;}
+
+void onPasswordChange(){_password = _passwordController.text;}                               
+
+@override
+void initState() {
+
+  _emailController.addListener(onEmailChange); 
+  _passwordController.addListener(onPasswordChange);
+  
+    // TODO: implement initState
+    super.initState();
+}
 
 ///
 /// UI Build
@@ -43,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Stack(
         children: <Widget>[
 
-           Pagebackground(AssetImage('assets/images/cherries.jpg')), 
+          Pagebackground(AssetImage('assets/images/cherries.jpg')), 
        
           new Center(
             ///
@@ -52,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+
                 DialInLogo(),
 
                 // Welcome text
@@ -75,10 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
                 // Email field
-                TextFieldEntry(StringLabels.email),
+                TextFieldEntry(StringLabels.email, _emailController),
 
                 // Password
-                TextFieldEntry(StringLabels.password),
+                TextFieldEntry(StringLabels.password ,_passwordController),
 
                 // Forgotton password
                 Container(
@@ -93,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       }),
                 ),
 
-                LoginButton( () => Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => OverviewPage()))),
+                LoginButton(loginButtonPressed),
 
                 Container(
                     margin: const EdgeInsets.all(15.0),
@@ -129,10 +165,10 @@ class _MyHomePageState extends State<MyHomePage> {
 ///
 class LoginButton extends StatelessWidget {
 
-  final VoidCallback loginActon ;
+  final Function loginAction ;
 
 
-  LoginButton(this.loginActon); 
+  LoginButton(this.loginAction); 
 
   Widget build(BuildContext context) {
       return RaisedButton(
@@ -142,10 +178,10 @@ class LoginButton extends StatelessWidget {
         color: Colors.orange.shade600.withOpacity(0.6),
         child: Text(StringLabels.logIn,
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25.0)),
-        onPressed: () => loginActon());
+        onPressed: loginAction
+      );
   }
-  }
-
+}
 
 ///
 ///Sign up Button

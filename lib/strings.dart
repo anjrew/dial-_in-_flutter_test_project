@@ -10,7 +10,14 @@ class  StringLabels {
         static const String brewCount = 'Brew count';
         static const String beanStash = 'Bean stash';
         static const String logOut = 'Log out';
+        static const String loggedIn = 'Logged in';
+        static const String signedYouUp = 'Signed you up';
+        static const String ok = 'OK';
+        static const String warning = 'Warning';
 
+
+
+        ///From iOS
         static const String syncData = "Sync data.";
         static const String userBig = "User";
         static const String userName = "User name";

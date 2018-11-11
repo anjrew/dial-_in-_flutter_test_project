@@ -46,22 +46,24 @@ class DialInLogo extends StatelessWidget {
 ///
 
 class TextFieldEntry extends StatefulWidget {
-  final String placeholder;
-  TextFieldEntry(this.placeholder);
+  final String _placeholder;
+  final TextEditingController _controller;
+
+
+  TextFieldEntry(this._placeholder, this._controller);
 
   @override
   State<StatefulWidget> createState() {
+
     return _TextFieldEntryState();
   }
 }
 
 /// Textfield Entry
 class _TextFieldEntryState extends State<TextFieldEntry> {
-  String _placeholderText;
 
   @override
   void initState() {
-    _placeholderText = widget.placeholder;
     super.initState();
   }
 
@@ -73,6 +75,8 @@ class _TextFieldEntryState extends State<TextFieldEntry> {
         margin: const EdgeInsets.all(0.0),
         alignment: const Alignment(0.0, 0.0),
         child: TextFormField(
+            
+            controller: widget._controller,
             textAlign: TextAlign.center,
             decoration: InputDecoration(
                 contentPadding: EdgeInsets.all(10.0),
@@ -80,7 +84,7 @@ class _TextFieldEntryState extends State<TextFieldEntry> {
                     borderRadius:
                         BorderRadius.all(const Radius.circular(10.0))),
                 filled: true,
-                hintText: _placeholderText,
+                hintText: widget._placeholder,
                 hintStyle: TextStyle(color: Colors.black),
                 fillColor: Colors.grey.withOpacity(0.7))));
   }
@@ -101,6 +105,7 @@ class CircularPicture extends StatelessWidget {
         width: _size);
   }
 }
+
 
 ///
 /// Action button
@@ -266,7 +271,8 @@ class UserCard extends StatelessWidget {
 
 ///Profile card
 class ProfileCard extends StatelessWidget {
-  Profile profile;
+  
+  final Profile profile;
 
   ProfileCard(this.profile);
 
@@ -427,4 +433,41 @@ class TabViewDataArray{
   List<TabViewData> ref;
 
  TabViewDataArray(this.ref);
+}
+
+
+
+class PopUps{
+///
+/// Show alert
+/// 
+
+static Future<void> showAlert({String title, String message, String buttonText, Function buttonFunction, BuildContext context }) async {
+  return showDialog<void>(
+    context: context,
+    barrierDismissible: false, // user must tap button!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        
+        title: Text(title),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              Text(message),
+            ],
+          ),
+        ),
+        actions: <Widget>[
+          FlatButton(
+            child: Text(buttonText),
+            onPressed: () {
+              buttonFunction();
+              // Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
+}
 }

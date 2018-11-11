@@ -8,7 +8,7 @@ import 'data.dart';
 import '../profile.dart';
 import 'feed.dart';
 import '../item.dart';
-import 'package:test_project/databaseFunctions.dart';
+import 'package:test_project/database_functions.dart';
 
 class ProfileList extends StatelessWidget{
 
