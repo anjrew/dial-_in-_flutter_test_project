@@ -3,7 +3,6 @@ import '../strings.dart';
 import '../custom_widgets.dart';
 import 'sign_up.dart';
 import 'overview_page.dart';
-import 'package:test_project/database_functions.dart';
 import '../database_functions.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -36,18 +35,37 @@ class _MyHomePageState extends State<MyHomePage> {
   /// Functions
 void forgotPassword() {  print(" Forgot password button pressed");  }
 
+Future<void> logIn(String emailUser, String password,
+      Function(bool, String) completion) async {
+          try {
+            FirebaseUser user = await FirebaseAuth.instance
+                .signInWithEmailAndPassword(email: emailUser, password: password);
+            completion(true, StringLabels.loggedIn);
+          } catch (e) {
+            completion(false, e.message);
+          }
+  }
+
 void loginButtonPressed(){ 
   print(" Login button pressed");
-  
-  PopUps.showAlert( 
-  buttonFunction:() {Navigator.of(context).pop();},
-  buttonText: StringLabels.ok ,
-  title: StringLabels.warning,
-  message: 'error',
-  context: context);  
+
+  logIn(_email, _password, (success,error){   
+    
+    if (success){    
+       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => OverviewPage()));
+      }else{
+      PopUps.showAlert( 
+        buttonFunction:() {Navigator.of(context).pop();},
+        buttonText: StringLabels.ok ,
+        title: StringLabels.warning,
+        message: error,
+        context: context);
+      }
+ });
+
+    
 }
 
-//  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => OverviewPage()));
 
 
 // }
