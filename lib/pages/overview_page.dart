@@ -9,6 +9,7 @@ import 'data.dart';
 import '../profile.dart';
 import 'feed.dart';
 import 'user_profile.dart';
+import '../database_functions.dart';
 
 
 class OverviewPage extends StatefulWidget{
@@ -46,7 +47,7 @@ super.dispose();
       /// App bar 
       ///
       appBar: AppBar(title: Text(StringLabels.overview, style: TextStyle( fontWeight: FontWeight.w700),), automaticallyImplyLeading: false,
-      leading: RawMaterialButton( onPressed: () => Navigator.pop(context), 
+      leading: RawMaterialButton( onPressed: () =>  DatabaseFunctions.logOut((){Navigator.pop(context);}) , 
       child: Icon(Icons.exit_to_app),), 
       actions: <Widget>[ 
         RawMaterialButton( onPressed: () => Navigator.pop(context), child: Icon(Icons.menu))  ], ),

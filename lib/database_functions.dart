@@ -118,4 +118,10 @@ class DatabaseFunctions {
       print(e.message);
     }
   }
+
+  static Future <void> logOut(Function signOutView)  async{
+    signOutView();
+    await FirebaseAuth.instance.signOut();
+    print('Logged out');
+}
 }

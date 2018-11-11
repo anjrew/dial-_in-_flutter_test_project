@@ -62,8 +62,6 @@ void loginButtonPressed(){
         context: context);
       }
  });
-
-    
 }
 
 
