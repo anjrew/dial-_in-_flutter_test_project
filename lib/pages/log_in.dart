@@ -127,10 +127,10 @@ void initState() {
                 ),
 
                 // Email field
-                TextFieldEntry(StringLabels.email, _emailController),
+                TextFieldEntry(StringLabels.email, _emailController, false),
 
                 // Password
-                TextFieldEntry(StringLabels.password ,_passwordController),
+                TextFieldEntry(StringLabels.password ,_passwordController, true),
 
                 // Forgotton password
                 Container(

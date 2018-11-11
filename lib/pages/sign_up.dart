@@ -17,52 +17,25 @@ class SignUpPage extends StatefulWidget{
 
   String _userName;
   TextEditingController _userNameController = new TextEditingController();
-  FocusNode _userNameTextFocus = new FocusNode(); 
 
   String _email;
   TextEditingController _emailController = new TextEditingController();
-  FocusNode _emailTextFocus = new FocusNode();
 
   String _password;
   TextEditingController _passwordController = new TextEditingController();
-  FocusNode _passwordTextFocus = new FocusNode();
 
   void onUsernameChange(){
-    String text = _emailController.text;
-    bool hasFocus = _emailTextFocus.hasFocus;
-    //do your text transforming
-    _userNameController.text = _email;
-    _userNameController.selection = new TextSelection(
-                                  baseOffset: _email.length, 
-                                  extentOffset: _email.length ); }
+    _userName = _userNameController.text; }
 
-  void onEmailChange(){
-    String text = _emailController.text;
-    bool hasFocus = _emailTextFocus.hasFocus;
-    //do your text transforming
-    _emailController.text = _email;
-    _emailController.selection = new TextSelection(
-                                  baseOffset: _email.length, 
-                                  extentOffset: _email.length ); }
+  void onEmailChange(){ _email =_emailController.text; }
 
-   void onPasswordChange(){
-    String text = _passwordController.text;
-    bool hasFocus = _passwordTextFocus.hasFocus;
-    //do your text transforming
-    _emailController.text = _email;
-    _emailController.selection = new TextSelection(
-                                  baseOffset: _email.length, 
-                                  extentOffset: _email.length ); }  
+   void onPasswordChange(){ _password = _passwordController.text;}  
 
                                   @override
   void initState() {
     _userNameController.addListener(onEmailChange); 
-    _userNameTextFocus.addListener(onEmailChange);
     _emailController.addListener(onEmailChange); 
-    _emailTextFocus.addListener(onEmailChange);
-    _passwordController.addListener(onPasswordChange);
-    _passwordTextFocus.addListener(onPasswordChange);
-    
+    _passwordController.addListener(onPasswordChange);    
       // TODO: implement initState
       super.initState();
     }        
@@ -102,13 +75,13 @@ class SignUpPage extends StatefulWidget{
                 /// Sign up details
                 /// Username
                 Text(StringLabels.userName, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
-                TextFieldEntry(StringLabels.userName, _userNameController),
+                TextFieldEntry(StringLabels.userName, _userNameController, false),
                 /// Email
                 Text(StringLabels.email, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
-                TextFieldEntry(StringLabels.email, _emailController),
+                TextFieldEntry(StringLabels.email, _emailController, false),
                 /// Password
                 Text(StringLabels.password, style: TextStyle( color: Colors.white70, fontWeight: FontWeight.w600),),
-                TextFieldEntry(StringLabels.password, _passwordController),
+                TextFieldEntry(StringLabels.password, _passwordController, true),
 
                 /// Signup button
                 Container(  margin: EdgeInsets.all(20.0), child: ActionButton(StringLabels.signUp, () =>{}),)

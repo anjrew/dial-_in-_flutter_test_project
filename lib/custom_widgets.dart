@@ -48,9 +48,10 @@ class DialInLogo extends StatelessWidget {
 class TextFieldEntry extends StatefulWidget {
   final String _placeholder;
   final TextEditingController _controller;
+  final bool _obscureText;
 
 
-  TextFieldEntry(this._placeholder, this._controller);
+  TextFieldEntry(this._placeholder, this._controller, this._obscureText);
 
   @override
   State<StatefulWidget> createState() {
@@ -75,7 +76,7 @@ class _TextFieldEntryState extends State<TextFieldEntry> {
         margin: const EdgeInsets.all(0.0),
         alignment: const Alignment(0.0, 0.0),
         child: TextFormField(
-            
+            obscureText: widget._obscureText,
             controller: widget._controller,
             textAlign: TextAlign.center,
             decoration: InputDecoration(
